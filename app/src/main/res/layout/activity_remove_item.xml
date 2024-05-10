@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RemoveItem">
+
+
+    <TextView
+        android:id="@+id/RETDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/RDateTV"
+        app:layout_constraintEnd_toEndOf="@+id/ReditTextDate"
+        app:layout_constraintStart_toStartOf="@+id/RDescTV"
+        app:layout_constraintTop_toBottomOf="@+id/RDescTV" />
+
+    <TextView
+        android:id="@+id/RDescTV"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Description:"
+        app:layout_constraintBottom_toTopOf="@+id/RETDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RETPhone" />
+
+    <TextView
+        android:id="@+id/RTVPostType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="48dp"
+        android:text="Post Type: "
+        app:layout_constraintBottom_toTopOf="@+id/RNameTV"
+        app:layout_constraintEnd_toStartOf="@+id/RradioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/RradioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="59dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/RETName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/RTVPostType"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/RlostTypeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost" />
+
+        <Space
+            android:layout_width="73dp"
+            android:layout_height="43dp"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/RfoundTypeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Found" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/RNameTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:text="Name:"
+        app:layout_constraintBottom_toTopOf="@+id/RETName"
+        app:layout_constraintEnd_toEndOf="@+id/RPhoneTV"
+        app:layout_constraintStart_toStartOf="@+id/RETName"
+        app:layout_constraintTop_toBottomOf="@+id/RTVPostType" />
+
+    <TextView
+        android:id="@+id/RETName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="432dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/RSaveButton"
+        app:layout_constraintEnd_toEndOf="@+id/RETPhone"
+        app:layout_constraintStart_toStartOf="@+id/RPhoneTV"
+        app:layout_constraintTop_toBottomOf="@+id/RradioGroup" />
+
+    <TextView
+        android:id="@+id/RETPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/RDescTV"
+        app:layout_constraintEnd_toEndOf="@+id/RETDesc"
+        app:layout_constraintStart_toStartOf="@+id/RPhoneTV"
+        app:layout_constraintTop_toBottomOf="@+id/RPhoneTV" />
+
+    <TextView
+        android:id="@+id/RPhoneTV"
+        android:layout_width="59dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Phone:"
+        app:layout_constraintBottom_toTopOf="@+id/RETPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RETName" />
+
+    <TextView
+        android:id="@+id/RDateTV"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
+        android:text="Date:"
+        app:layout_constraintBottom_toTopOf="@+id/ReditTextDate"
+        app:layout_constraintEnd_toEndOf="@+id/RLocationTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RETDesc" />
+
+    <TextView
+        android:id="@+id/ReditTextDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/RLocationTV"
+        app:layout_constraintEnd_toEndOf="@+id/RETLocation"
+        app:layout_constraintStart_toStartOf="@+id/RETLocation"
+        app:layout_constraintTop_toBottomOf="@+id/RDateTV" />
+
+    <TextView
+        android:id="@+id/RLocationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="18dp"
+        android:text="Location: "
+        app:layout_constraintBottom_toTopOf="@+id/RETLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReditTextDate" />
+
+    <TextView
+        android:id="@+id/RETLocation"
+        android:layout_width="357dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="126dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RLocationTV" />
+
+    <Button
+        android:id="@+id/RSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:text="REMOVE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RETName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
