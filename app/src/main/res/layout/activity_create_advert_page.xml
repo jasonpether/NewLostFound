@@ -8,30 +8,6 @@
     tools:context=".CreateAdvertPage">
 
 
-    <EditText
-        android:id="@+id/ETDesc"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/DateTV"
-        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-        app:layout_constraintStart_toStartOf="@+id/DescTV"
-        app:layout_constraintTop_toBottomOf="@+id/DescTV" />
-
-    <TextView
-        android:id="@+id/DescTV"
-        android:layout_width="105dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="10dp"
-        android:text="Description:"
-        app:layout_constraintBottom_toTopOf="@+id/ETDesc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETPhone" />
-
     <TextView
         android:id="@+id/TVPostType"
         android:layout_width="wrap_content"
@@ -39,7 +15,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="28dp"
         android:text="Post Type: "
         app:layout_constraintBottom_toTopOf="@+id/NameTV"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup"
@@ -52,7 +28,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="54dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginBottom="39dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/ETName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,64 +54,17 @@
             android:text="Found" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/NameTV"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:text="Name:"
-        app:layout_constraintBottom_toTopOf="@+id/ETName"
-        app:layout_constraintEnd_toEndOf="@+id/PhoneTV"
-        app:layout_constraintStart_toStartOf="@+id/ETName"
-        app:layout_constraintTop_toBottomOf="@+id/TVPostType" />
-
     <EditText
         android:id="@+id/ETName"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/SaveButton"
+        app:layout_constraintBottom_toTopOf="@+id/ETPhone"
         app:layout_constraintEnd_toEndOf="@+id/ETPhone"
         app:layout_constraintStart_toStartOf="@+id/PhoneTV"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <EditText
-        android:id="@+id/ETPhone"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/DescTV"
-        app:layout_constraintEnd_toEndOf="@+id/ETDesc"
-        app:layout_constraintStart_toStartOf="@+id/PhoneTV"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneTV" />
-
-    <TextView
-        android:id="@+id/PhoneTV"
-        android:layout_width="59dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Phone:"
-        app:layout_constraintBottom_toTopOf="@+id/ETPhone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETName" />
-
-    <TextView
-        android:id="@+id/DateTV"
-        android:layout_width="44dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="10dp"
-        android:text="Date:"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
-        app:layout_constraintEnd_toEndOf="@+id/LocationTV"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETDesc" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -143,47 +72,130 @@
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="60dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/LocationTV"
+        app:layout_constraintBottom_toTopOf="@+id/ETLocation"
         app:layout_constraintEnd_toEndOf="@+id/ETLocation"
         app:layout_constraintStart_toStartOf="@+id/ETLocation"
-        app:layout_constraintTop_toBottomOf="@+id/DateTV" />
-
-    <TextView
-        android:id="@+id/LocationTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="18dp"
-        android:text="Location: "
-        app:layout_constraintBottom_toTopOf="@+id/ETLocation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/ETDesc" />
 
     <EditText
         android:id="@+id/ETLocation"
         android:layout_width="357dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="126dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/GetCurrentLocationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+    <TextView
+        android:id="@+id/NameTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="63dp"
+        android:text="Name:"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneTV"
+        app:layout_constraintEnd_toEndOf="@+id/PhoneTV"
+        app:layout_constraintStart_toStartOf="@+id/ETName"
+        app:layout_constraintTop_toBottomOf="@+id/TVPostType" />
+
+    <TextView
+        android:id="@+id/DateTV"
+        android:layout_width="44dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="72dp"
+        android:text="Date:"
+        app:layout_constraintBottom_toTopOf="@+id/LocationTV"
+        app:layout_constraintEnd_toEndOf="@+id/LocationTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescTV" />
+
+    <EditText
+        android:id="@+id/ETDesc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="69dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="@+id/DescTV"
+        app:layout_constraintTop_toBottomOf="@+id/ETPhone" />
+
+    <TextView
+        android:id="@+id/DescTV"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="69dp"
+        android:text="Description:"
+        app:layout_constraintBottom_toTopOf="@+id/DateTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneTV" />
+
+    <TextView
+        android:id="@+id/PhoneTV"
+        android:layout_width="59dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="66dp"
+        android:text="Phone:"
+        app:layout_constraintBottom_toTopOf="@+id/DescTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameTV" />
+
+    <TextView
+        android:id="@+id/LocationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="203dp"
+        android:text="Location: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LocationTV" />
+        app:layout_constraintTop_toBottomOf="@+id/DateTV" />
+
+    <EditText
+        android:id="@+id/ETPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="68dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ETDesc"
+        app:layout_constraintEnd_toEndOf="@+id/ETDesc"
+        app:layout_constraintStart_toStartOf="@+id/PhoneTV"
+        app:layout_constraintTop_toBottomOf="@+id/ETName" />
 
     <Button
         android:id="@+id/SaveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="3dp"
         android:text="SAVE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETName" />
+        app:layout_constraintTop_toBottomOf="@+id/GetCurrentLocationButton" />
+
+    <Button
+        android:id="@+id/GetCurrentLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:backgroundTint="#1F6F87"
+        android:text="GET CURRENT LOCATION"
+        app:layout_constraintBottom_toTopOf="@+id/SaveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETLocation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package lost.found;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -22,9 +23,10 @@ public class ItemList extends AppCompatActivity {
 
     RecyclerView recyclerView;
     SQLDB DB;
-    ArrayList<String> id, Type, Name, Phone, Desc, Date, Location;
+    public ArrayList<String> id, Type, Name, Phone, Desc, Date, Location;
     FloatingActionButton home;
     CustomAdapter customAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

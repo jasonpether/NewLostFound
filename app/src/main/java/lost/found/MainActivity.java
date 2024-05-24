@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button createItem, showList;
+    Button createItem, showList, showMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     createItem = findViewById(R.id.CreateAdvertButton);
     showList = findViewById(R.id.ViewAdvertsButton);
+    showMap = findViewById(R.id.ShowMap);
 
     createItem.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent jump = new Intent(MainActivity.this, ItemList.class);
+            startActivity(jump);
+        }
+    });
+
+    showMap.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent jump = new Intent(MainActivity.this, MapsActivity.class);
             startActivity(jump);
         }
     });
